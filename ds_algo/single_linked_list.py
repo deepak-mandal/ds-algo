@@ -6,22 +6,55 @@ Created on Fri Jul 10 20:24:55 2020
 @author: deepak
 """
 
-
-class node:    #---------------------------------------------------------------Class node, that represent node of single linked list
+#Class node, that represent node of single linked list-------------------------
+class node:    
     def __init__(self, value):
         self.info=value
-        self.link=None
-        
-        
+        self.link=None        
+#-------------------------------------------------------------------------------        
+#------------------------------------------------------------------------------  
+  
 class SingleLinkedList:
+    
     def __init__(self):
-        self.start=None   
+        self.start=None  
+        
     def display_list(self):
-        pass
+        if self.start is None:
+            print('List is empty')
+            return
+        else:
+            print('list is: ')
+            p=self.start
+            while p is not None:
+                print(p.info, ' ', end=' ')
+                p=p.link
+            print()
+            
+        
     def count_nodes(self):
-        pass
+        p=self.start
+        n=0
+        while p is not None:
+            n+=1
+            p=p.link
+        print('Number of nodes in the list = ', n)
+    
+    
     def search(self, x):
-        pass
+        position=1
+        p=self.start
+        while p is not None:
+            if p.info==x:
+                print(x, 'is at position ', position)
+                return True
+            position+=1
+            p=p.link
+        else:
+            print(x, 'not found in the list')
+            return False
+            
+    
     def insert_in_beginning(self, data):
         pass
     def insert_at_end(self, data):
