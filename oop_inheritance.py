@@ -6,6 +6,8 @@ Created on Sat Jul 18 09:28:04 2020
 @author: deepak
 """
 
+#Quadrilateral=Base Class
+#Rectangle=Child Class
 
 class Quadrilateral:
     def __init__(self, a, b, c, d):
