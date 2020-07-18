@@ -26,4 +26,4 @@ print(c1.speed)
 c1.speed=50
 print(c1.speed)
 c1.speed=-70
-print(c1.set_speed(c1.speed))
+c1.set_speed(c1.speed)
