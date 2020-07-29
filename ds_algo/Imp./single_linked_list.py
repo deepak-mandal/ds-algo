@@ -238,24 +238,145 @@ class SingleLinkedList:
             
     
     
-    def has_cycle(self):
-        pass
-    def find_cycle(self):
-        pass
+    def has_cycle(self):    
+        if self.find_cycle() is None:
+            return False
+        else:
+            return True
+            
+    
+    def find_cycle(self):           #detect the cycle in a list using Hare and Tortoise Algorithm
+        if self.start is None or self.start.link is None:
+            return None
+        slowR=self.start
+        fastR=self.start
+        
+        while fastR is not None and fastR.link is not None:
+            slowR=slowR.link
+            fastR=fastR.link.link
+            if slowR==fastR:
+                return slowR
+        return None        
+        
+        
     def remove_cycle(self):
-        pass
-    def insert_cycle(self):
-        pass
+        c=self.find_cycle()
+        if c is None:
+            return
+        print('Node at which the cycle was detected is ', c.info)
+        
+        p=c
+        q=c
+        len_cycle=0
+        
+        while True:
+            len_cycle+=1
+            q=q.link
+            if p==q:
+                break
+        print('length of cycle is : ', len_cycle)
+        
+        len_rem_list=0
+        p=self.start
+        while p!=q:
+            len_rem_list+=1
+            p=p.link
+            q=q.link
+        print('Number of nodes not included in the cycle are: ', len_rem_list)
+        
+        length_list=len_cycle+len_rem_list
+        print('length of the list is: ', length_list)
+        
+        p=self.start        #for removing cycle
+        for i in range(length_list-1):
+            p=p.link
+        p.link=None
+        
+        
+        
+            
+        
+        
+    def insert_cycle(self, x):
+        if self.start is None:
+            return
+        p=self.start
+        px=None
+        prev=None
+        
+        while p is not None:
+            if p.info==x:
+                px=p
+            prev=p
+            p=p.link
+            
+        if px is not None:
+            prev.link=px
+        else:
+            print(x, 'not present in list')
+            
+        
+    
     def merge2(self, list2):
-        pass
+        merge_list=SingleLinkedList()
+        merge_list.start=self._merge2(self.start, list2.start)      #we will create a merge list by rearranging links
+        return merge_list
+    
     def _merge2(self, p1, p2):
-        pass
+        if p1.info<=p2.info:
+            startM=p1
+            p1=p1.link
+        else:
+            startM=p2
+            p2=p2.link
+        pM=startM
+        
+        while p1 is not None and p2 is not None:
+            if p1.info<=p2.info:
+                pM.link=p1
+                pM=pM.link
+                p1=p1.link
+            else:
+                pM.link=p2
+                pM=pM.link
+                p2=p2.link
+                
+        if p1 is None:
+            pM.link=p2
+        else:
+            pM.link=p1
+        return startM
+    
+    
+    
     def merge_sort(self):
-        pass
-    def _merge_sort_rec(self, liststart):
-        pass
-    def divide_list(self, p):
-        pass
+        self.start=self._merge_sort_rec(self.start)         #recursive method
+    
+    def _merge_sort_rec(self, list_start):      #Merge Sort Algorithm
+        #if list empty or has one element
+        if list_start is None or list_start.link is None:
+            return list_start
+        #if more than one element
+        start1=list_start       #start refs. to 1st node of  the 1st list
+        start2=self._divide_list(list_start)         #start2 refs. to 1st node of 2nd list
+        start1=self._merge_sort_rec(start1)
+        start2=self._merge_sort_rec(start2)
+        startM=self._merge2(start1, start2)         #here we merge both by rearranging links
+        return startM
+    
+    
+    
+    def _divide_list(self, p):
+        q=p.link.link
+        while q is not None and q.link is not None:
+            p=p.link        #p ref. to 1st node of list that has to be divided
+            q=q.link.link       #q ref. to 3rd nofe of lidt
+        start2=p.link
+        p.link=None
+        return start2
+    
+    
+    
     
     
     
@@ -287,7 +408,7 @@ while True:
     print('14. Bubble sort by exchanging links')
     print('15. Merge Sort')
     print('16. Insert cycle')
-    print('17. Delete cycle')
+    print('17. Find cycle')
     print('18. Remove Cycle')
     print('19. Quit')
     
