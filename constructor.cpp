@@ -21,4 +21,3 @@ cout<<c.side<<endl;
 
 
 }
-© 2020 GitHub, Inc
