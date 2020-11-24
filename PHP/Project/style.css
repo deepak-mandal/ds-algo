@@ -1,0 +1,23 @@
+/*
+Final Project on E-Store website where database as ekart;
+Friday 01 May 2020 09:06:53 PM IST 
+
+It include following files :-
+common.php
+style.css
+header.php
+*/
+/* 
+    Created on : 13-May-2020, 5:31:00 PM
+    Author     : deepak
+*/
+.column_style{
+    border:1px solid #000;
+}
+
+.row_style{
+    margin-top:10px;
+}
+/*.btn-primary{
+    font-size: 25px;
+}*/
