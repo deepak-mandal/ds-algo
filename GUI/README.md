@@ -1,1 +1,1 @@
-![Calculator_grid](/Calculator_grid.png)
+![Calculator_grid](/GUI/Calculator_grid.png)
