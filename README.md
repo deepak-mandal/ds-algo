@@ -1,5 +1,5 @@
 Programming with Python: https://drive.google.com/file/d/1t8tNXF_OBaTuzIt-9aDfUtLJz5JcQmCi/view?usp=sharing
-![Py](/https://drive.google.com/file/d/1t8tNXF_OBaTuzIt-9aDfUtLJz5JcQmCi/view?usp=sharingg)
+![Py](href="https://drive.google.com/file/d/1t8tNXF_OBaTuzIt-9aDfUtLJz5JcQmCi/view?usp=sharingg")
 
 Certified Python Marketing Analytics(CPMA): https://drive.google.com/file/d/1gEPhMKFntl1qX1xWGKyjScFEp4gmOByN/view?usp=sharing
 
