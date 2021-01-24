@@ -380,7 +380,7 @@ class SingleLinkedList:
     
     
     
-#------------------------------------------------------------------------------
+#-------------------------------------------------------------------------------
 
 list=SingleLinkedList()    #---------------------------------------------------Create a new single linked list instance object, 
 list.create_list()    #--------------------------------------------------------currently no item in the list because in constructor we have initislze start with none
