@@ -2,8 +2,11 @@ package dataStructuresAndAlgorithmsInJava.sorting;
 
 import java.util.Arrays;
 
+//based on divide and conquer technique
+//O(NlogN)
 public class MergeSort {
 
+	// Divide technique
 	public static void split(String[] listToSort, String[] listFirstHalf, String[] listSecondHalf) {
 		int secondHalfStartIndex = listFirstHalf.length;
 		for (int index = 0; index < listToSort.length; index++) {
@@ -15,6 +18,7 @@ public class MergeSort {
 		}
 	}
 
+	// conquer technique
 	public static void merge(String[] listToSort, String[] listFirstHalf, String[] listSecondHalf) {
 
 		int mergeIndex = 0;
@@ -48,6 +52,7 @@ public class MergeSort {
 
 	public static void mergeSort(String[] listToSort) {
 
+		// Assuming list of one element to be already sorted
 		if (listToSort.length == 1) {
 			return;
 		}
@@ -67,7 +72,6 @@ public class MergeSort {
 		merge(listToSort, listFirstHalf, listSecondHalf);
 
 		System.out.println("\n merged: " + Arrays.toString(listToSort));
-
 	}
 
 	public static void main(String[] args) {

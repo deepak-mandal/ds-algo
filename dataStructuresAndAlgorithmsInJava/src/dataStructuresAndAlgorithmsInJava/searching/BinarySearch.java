@@ -1,5 +1,7 @@
 package dataStructuresAndAlgorithmsInJava.searching;
 
+//Only performed in sorted list
+//O(logN)
 public class BinarySearch {
 
 	public static int binarySearch(String[] list, String element) {
@@ -20,7 +22,6 @@ public class BinarySearch {
 				low = mid + 1;
 			} else {
 				high = mid - 1;
-
 			}
 		}
 		return -1;
@@ -30,6 +31,6 @@ public class BinarySearch {
 		String sortedList[] = new String[] { "Alex", "Ben", "Carl", "Dora", "Elise", "Fiona", "Gerald", "Harry",
 				"Irene", "Jeff", "Kris", "Lewis", "Marry", "Nora", "Ophelia", "Peter" };
 
-		System.out.println("\nElement index: " + binarySearch(sortedList, "Harry"));
+		System.out.println("\nElement index: " + binarySearch(sortedList, "Deepak"));
 	}
 }
