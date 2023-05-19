@@ -1,0 +1,28 @@
+{
+    "students":[
+        {
+            "id":1,
+            "name":"Deepak",
+            "Dept":"IT",
+            "location":"Bangalore"
+        },
+        {
+            "id":14,
+            "name":"Manish",
+            "Dept":"HR",
+            "location":"Mumbai"
+        },
+        {
+            "id":45,
+            "name":"Rohit",
+            "Dept":"Finance",
+            "location":"Chennai"
+        },
+        {
+            "id":1324,
+            "name":"Rahul",
+            "Dept":"Marketing",
+            "location":"Delhi"
+        }
+    ]
+}

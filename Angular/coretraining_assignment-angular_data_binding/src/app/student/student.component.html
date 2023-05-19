@@ -1,0 +1,51 @@
+<div class="container">
+    <hr>
+    <div class="row">
+        <div class="col-xs-12">
+            <h6>2. Write an angular app with an input box to input the names of students and a button. 
+                Create an array of json objects. After the button is clicked display all the properties
+                 of a particular student from the array of json objects.</h6>
+           <h6>Available options are: {{studentData |json}}</h6>
+
+            <form #myForm="ngForm">
+                
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" name="name" [(ngModel)]="studentObj.name">
+                </div>
+                <br>
+                <button type="button" (click)="getDetailsByName(myForm.value)" class="btn btn-primary">Submit</button>
+                
+            </form>
+            <br>
+    
+            <!--Displaying the desired result for the input name/data-->
+           <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <tbody>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                        <th>Dept</th>
+                        <th>location</th>
+                    </tr>
+                    <tr>
+                        <td>{{outData[0]}}</td>
+                        <td>{{outData[1]}}</td>
+                        <td>{{outData[2]}}</td>
+                        <td>{{outData[3]}}</td>
+                    </tr>
+                    
+                   
+                </tbody>
+            </table>
+        </div>
+            
+         
+    
+        </div> 
+    </div>
+
+</div>
+
+<hr>

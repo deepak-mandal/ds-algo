@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron">
+        <h6>1. Write an angular app to create an input box and a button. Bind the input box with the
+            model using two way binding. After clicking the button display a block of elements 
+            if the entered text is "display". Otherwise display an alternative message.</h6>
+    
+            Please input whatever you want!: <input [(ngModel)]="message" type="text">
+        <!--{{message}}-->
+        
+        <div *ngIf="(message=='display'); else falseBlock">
+            <h1>display</h1>
+        
+        </div>
+        
+        
+        <ng-template #falseBlock>
+            <h2>Type "display" to see the output as 'display'</h2>
+        </ng-template>
+        </div>
+        
+        
+</div>

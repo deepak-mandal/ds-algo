@@ -1,0 +1,39 @@
+{
+  "dept": [
+    {
+      "id": "1234",
+      "deptname": "Hr",
+      "location": "Bangalore"
+    },
+    {
+      "id": "124",
+      "deptname": "Finance",
+      "location": "Chennai"
+    },
+    {
+      "id": "2014",
+      "deptname": "Engineering",
+      "location": "India"
+    },
+    {
+      "id": "2015",
+      "deptname": "BDE",
+      "location": "CGI"
+    },
+    {
+      "id": "121",
+      "deptname": "Home",
+      "location": "Earth"
+    },
+    {
+      "id": "14",
+      "deptname": "IT",
+      "location": "Bangalore"
+    },
+    {
+      "id": "1",
+      "deptname": "Software ",
+      "location": "Pune"
+    }
+  ]
+}
