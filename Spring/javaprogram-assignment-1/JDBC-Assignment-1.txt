@@ -1,0 +1,489 @@
+/*
+Name: Deepak Kumar Mandal
+Email: dkm.iit.g@gmail.com
+Date: 20-10-2021
+*/
+
+
+Problem Statement:-
+Sales management app which is used to store Sales_Rep, Customer,and Invoice. Create the necessary tables, relationships and add sample data into each table.
+
+
+
+Solution (Part-wise):-
+
+
+DDL
+
+Create the tables for Sales_Rep, Consumer and Invoice.
+
+Sales_Rep table fields: Rep_ID Integer, Name varchar, City varchar, commision double, Rep_ID primary key.
+
+Consumer table fields: Consumer_ID Integer, Consumer_Name varchar, City varchar, Grade varchar, Rep_ID Integer Consumer_ID Primary Key, Rep_ID Foreign key
+
+Invoice table fields : Invoice_ID Integer, Invoice_amount double , Invoice_Date date , Consumer_ID Integer, Rep_ID Integer Invoice_ID primary Key, Consumer_ID and Rep_ID Foreign Key
+
+
+
+Solution:
+/********************************************************************************************************************/
+PS C:\Users\dkmii> mysql -u root -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.19-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| hr                 |
+| information_schema |
+| mykart             |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+9 rows in set (0.135 sec)
+
+MariaDB [(none)]> create database sales_management;
+Query OK, 1 row affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| hr                 |
+| information_schema |
+| mykart             |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| sales_management   |
+| test               |
++--------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [(none)]> use sales_management;
+Database changed
+
+MariaDB [sales_management]> create table Sales_Rep(Rep_ID int primary key, Name varchar(20), City varchar(20), commision double);
+Query OK, 0 rows affected (0.280 sec)
+
+MariaDB [sales_management]> show tables;
++----------------------------+
+| Tables_in_sales_management |
++----------------------------+
+| sales_rep                  |
++----------------------------+
+1 row in set (0.001 sec)
+
+MariaDB [sales_management]> desc sales_rep;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| Rep_ID    | int(11)     | NO   | PRI | NULL    |       |
+| Name      | varchar(20) | YES  |     | NULL    |       |
+| City      | varchar(20) | YES  |     | NULL    |       |
+| commision | double      | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.015 sec)
+
+MariaDB [sales_management]> create table Consumer(Consumer_ID int primary key, Consumer_Name varchar(20), City varchar(20), Grade varchar(11), Rep_ID int references Sales_Rep(Rep_ID));
+Query OK, 0 rows affected (0.378 sec)
+
+MariaDB [sales_management]> desc Consumer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Consumer_ID   | int(11)     | NO   | PRI | NULL    |       |
+| Consumer_Name | varchar(20) | YES  |     | NULL    |       |
+| City          | varchar(20) | YES  |     | NULL    |       |
+| Grade         | varchar(11) | YES  |     | NULL    |       |
+| Rep_ID        | int(11)     | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+5 rows in set (0.015 sec)
+
+MariaDB [sales_management]> create table Invoice(Invoice_ID int primary key, Invoice_amount double, Invoice_Date date, Consumer_ID int references Consumer(Consumer_ID), Rep_ID int references Sales_Rep(Rep_ID));
+Query OK, 0 rows affected (0.438 sec)
+
+MariaDB [sales_management]> desc Invoice;
++----------------+---------+------+-----+---------+-------+
+| Field          | Type    | Null | Key | Default | Extra |
++----------------+---------+------+-----+---------+-------+
+| Invoice_ID     | int(11) | NO   | PRI | NULL    |       |
+| Invoice_amount | double  | YES  |     | NULL    |       |
+| Invoice_Date   | date    | YES  |     | NULL    |       |
+| Consumer_ID    | int(11) | YES  |     | NULL    |       |
+| Rep_ID         | int(11) | YES  |     | NULL    |       |
++----------------+---------+------+-----+---------+-------+
+5 rows in set (0.015 sec)
+
+MariaDB [sales_management]> show tables;
++----------------------------+
+| Tables_in_sales_management |
++----------------------------+
+| consumer                   |
+| invoice                    |
+| sales_rep                  |
++----------------------------+
+3 rows in set (0.001 sec)
+/********************************************************************************************************************/
+
+
+
+
+
+DML
+
+Insert the rows into the created tables (Sales_Rep, Consumer, Invoice) as given below.
+
+Sales_Rep
+
+Rep_ID	Name	City	commision
+1001	Anthony G	New Delhi	0.25
+1002	Rejina R	Bangalore	0.15
+1003	Santhosh	Mumbai	0.12
+1005	Jaya Prasad	Chennai	0.11
+1006	Diptish	Kolkatta	0.12
+1007	Abbas	Hyderabad	0.1
+Consumer
+
+Consumer_ID	Consumer_Name	City	Grade	Rep_ID
+3001	Mary	Chennai	NULL	1005
+3002	Nirav Parmar	New Delhi	100	1001
+3003	Ram Sangeeth	Hyderabad	200	1007
+3004	Somsubhra	Kolkatta	300	1006
+3005	James	Bangalore	200	1002
+3007	Harish Manana	New Delhi	200	1001
+3008	Rajesh Kumar	Bangalore	300	1002
+3009	Sharon George	Mumbai	100	1003
+Invoice
+
+Invoice_ID	Invoice_amount	Invoice_Date	Consumer_ID	Rep_ID
+10001	1500.5	2017-10-05	3005	1002
+10002	6560.2	2017-10-05	3002	1001
+10003	2480.4	2017-10-10	3009	1003
+10004	1100.5	2017-08-17	3009	1003
+10005	2400.6	2017-07-27	3007	1001
+10007	9480.5	2017-09-10	3005	1002
+10008	5760	2017-09-10	3002	1001
+10009	2700.6	2017-09-10	3001	1005
+10010	1983.43	2017-10-10	3004	1006
+10011	7500.29	2017-08-17	3003	1007
+10012	2500.45	2017-06-27	3008	1002
+10013	3045.6	2017-04-25	3002	1001
+
+
+Solution:
+/********************************************************************************************************************/
+MariaDB [sales_management]> desc sales_rep;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| Rep_ID    | int(11)     | NO   | PRI | NULL    |       |
+| Name      | varchar(20) | YES  |     | NULL    |       |
+| City      | varchar(20) | YES  |     | NULL    |       |
+| commision | double      | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+4 rows in set (0.017 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1001, 'Anthony G', 'New Delhi', 0.25);
+Query OK, 1 row affected (0.303 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1002, 'Rejina R', 'Bangalore', 0.15);
+Query OK, 1 row affected (0.095 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1003, 'Santhosh', 'Mumbai', 0.12);
+Query OK, 1 row affected (0.108 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1005, 'Jaya Prasad', 'Chennai', 0.11);
+Query OK, 1 row affected (0.096 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1006, 'Diptish', 'Kolkatta', 0.12);
+Query OK, 1 row affected (0.099 sec)
+
+MariaDB [sales_management]> insert into sales_rep(Rep_ID, Name, City, commision) values (1007, 'Abbas', 'Hyderabad', 0.1);
+Query OK, 1 row affected (0.111 sec)
+
+MariaDB [sales_management]> select * from sales_rep;
++--------+-------------+-----------+-----------+
+| Rep_ID | Name        | City      | commision |
++--------+-------------+-----------+-----------+
+|   1001 | Anthony G   | New Delhi |      0.25 |
+|   1002 | Rejina R    | Bangalore |      0.15 |
+|   1003 | Santhosh    | Mumbai    |      0.12 |
+|   1005 | Jaya Prasad | Chennai   |      0.11 |
+|   1006 | Diptish     | Kolkatta  |      0.12 |
+|   1007 | Abbas       | Hyderabad |       0.1 |
++--------+-------------+-----------+-----------+
+6 rows in set (0.067 sec)
+
+MariaDB [sales_management]> desc Consumer;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| Consumer_ID   | int(11)     | NO   | PRI | NULL    |       |
+| Consumer_Name | varchar(20) | YES  |     | NULL    |       |
+| City          | varchar(20) | YES  |     | NULL    |       |
+| Grade         | varchar(11) | YES  |     | NULL    |       |
+| Rep_ID        | int(11)     | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+5 rows in set (0.014 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3001, 'Mary', 'Chennai', NULL, 1005);
+Query OK, 1 row affected (0.102 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3002, 'Nirav Parmar', 'New Delhi', 100, 1001);
+Query OK, 1 row affected (0.098 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3003, 'Ram Sangeeth', 'Hyderabad', 200, 1007);
+Query OK, 1 row affected (0.095 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3004, 'Somsubhra', 'Kolkatta', 300, 1006);
+Query OK, 1 row affected (0.098 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3005, 'James', 'Bangalore', 200, 1002);
+Query OK, 1 row affected (0.186 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3007, 'Harish Manana', 'New Delhi', 200, 1001);
+Query OK, 1 row affected (0.102 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3008, 'Rajesh Kumar', 'Bangalore', 300, 1002);
+Query OK, 1 row affected (0.071 sec)
+
+MariaDB [sales_management]> insert into Consumer(Consumer_ID, Consumer_Name, City, Grade, Rep_ID) values (3009, 'Sharon George', 'Mumbai', 100, 1003);
+Query OK, 1 row affected (0.072 sec)
+
+MariaDB [sales_management]> select * from Consumer;
++-------------+---------------+-----------+-------+--------+
+| Consumer_ID | Consumer_Name | City      | Grade | Rep_ID |
++-------------+---------------+-----------+-------+--------+
+|        3001 | Mary          | Chennai   | NULL  |   1005 |
+|        3002 | Nirav Parmar  | New Delhi | 100   |   1001 |
+|        3003 | Ram Sangeeth  | Hyderabad | 200   |   1007 |
+|        3004 | Somsubhra     | Kolkatta  | 300   |   1006 |
+|        3005 | James         | Bangalore | 200   |   1002 |
+|        3007 | Harish Manana | New Delhi | 200   |   1001 |
+|        3008 | Rajesh Kumar  | Bangalore | 300   |   1002 |
+|        3009 | Sharon George | Mumbai    | 100   |   1003 |
++-------------+---------------+-----------+-------+--------+
+8 rows in set (0.000 sec)
+
+MariaDB [sales_management]> desc invoice;
++----------------+---------+------+-----+---------+-------+
+| Field          | Type    | Null | Key | Default | Extra |
++----------------+---------+------+-----+---------+-------+
+| Invoice_ID     | int(11) | NO   | PRI | NULL    |       |
+| Invoice_amount | double  | YES  |     | NULL    |       |
+| Invoice_Date   | date    | YES  |     | NULL    |       |
+| Consumer_ID    | int(11) | YES  |     | NULL    |       |
+| Rep_ID         | int(11) | YES  |     | NULL    |       |
++----------------+---------+------+-----+---------+-------+
+5 rows in set (0.014 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10001, 1500.5, '2017-10-05', 3005, 1002);
+Query OK, 1 row affected, 1 warning (0.137 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10002, 6560.2, '2017-10-05', 3002, 1001);
+Query OK, 1 row affected, 1 warning (0.152 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10003, 2480.4, '2017-10-10', 3009, 1003);
+Query OK, 1 row affected, 1 warning (0.072 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10004, 1100.5, '2017-08-17', 3009, 1003);
+Query OK, 1 row affected, 1 warning (0.070 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10005, 2400.6, '2017-07-27', 3007, 1001);
+Query OK, 1 row affected, 1 warning (0.082 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10007, 9480.5, '2017-09-10', 3005, 1002);
+Query OK, 1 row affected, 1 warning (0.040 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10008, 5760, '2017-09-10', 3002, 1001);
+Query OK, 1 row affected, 1 warning (0.071 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10009, 2700.6, '2017-09-10', 3001, 1005);
+Query OK, 1 row affected, 1 warning (0.087 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10010, 1983.43, '2017-10-10', 3004, 1006);
+Query OK, 1 row affected, 1 warning (0.081 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10011, 7500.29, '2017-08-17', 3003, 1007);
+Query OK, 1 row affected, 1 warning (0.112 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10012, 2500.45, '2017-06-27', 3008, 1002);
+Query OK, 1 row affected, 1 warning (0.094 sec)
+
+MariaDB [sales_management]> insert into Invoice(Invoice_ID, Invoice_amount, Invoice_Date, Consumer_ID, Rep_ID) values (10013, 3045.6, '2017-04-25', 3002, 1001);
+Query OK, 1 row affected, 1 warning (0.073 sec)
+
+MariaDB [sales_management]> select * from Invoice;
++------------+----------------+--------------+-------------+--------+
+| Invoice_ID | Invoice_amount | Invoice_Date | Consumer_ID | Rep_ID |
++------------+----------------+--------------+-------------+--------+
+|      10001 |         1500.5 | 2017-10-05   |        3005 |   1002 |
+|      10002 |         6560.2 | 2017-10-05   |        3002 |   1001 |
+|      10003 |         2480.4 | 2017-10-10   |        3009 |   1003 |
+|      10004 |         1100.5 | 2017-08-17   |        3009 |   1003 |
+|      10005 |         2400.6 | 2017-07-27   |        3007 |   1001 |
+|      10007 |         9480.5 | 2017-09-10   |        3005 |   1002 |
+|      10008 |           5760 | 2017-09-10   |        3002 |   1001 |
+|      10009 |         2700.6 | 2017-09-10   |        3001 |   1005 |
+|      10010 |        1983.43 | 2017-10-10   |        3004 |   1006 |
+|      10011 |        7500.29 | 2017-08-17   |        3003 |   1007 |
+|      10012 |        2500.45 | 2017-06-27   |        3008 |   1002 |
+|      10013 |         3045.6 | 2017-04-25   |        3002 |   1001 |
++------------+----------------+--------------+-------------+--------+
+12 rows in set (0.000 sec)
+/********************************************************************************************************************/
+
+
+
+
+
+SELECTION
+
+Write a SQL Query to retrieve the details of the Consumer like Consumer_ID, Consumer_Name, City , Grade , Rep_ID who are from Bangalore and Kolkatta.
+/*****************************************************/
+MariaDB [sales_management]> select * from consumer where City='Bangalore' or city='Kolkatta';
++-------------+---------------+-----------+-------+--------+
+| Consumer_ID | Consumer_Name | City      | Grade | Rep_ID |
++-------------+---------------+-----------+-------+--------+
+|        3004 | Somsubhra     | Kolkatta  | 300   |   1006 |
+|        3005 | James         | Bangalore | 200   |   1002 |
+|        3008 | Rajesh Kumar  | Bangalore | 300   |   1002 |
++-------------+---------------+-----------+-------+--------+
+3 rows in set (0.059 sec)
+/*****************************************************/
+
+
+
+
+
+Write a SQL Query to retrieve the details of the Invoice like Invoice_ID, Invoice_Date, Consumer_ID, Rep_ID, Invoice_Amount whose Invoice_Amount is more than 5000.
+/***************************************************/
+MariaDB [sales_management]> select Invoice_ID, Invoice_Date, Consumer_ID, Rep_ID, Invoice_Amount from Invoice where Invoice_Amount>5000;
++------------+--------------+-------------+--------+----------------+
+| Invoice_ID | Invoice_Date | Consumer_ID | Rep_ID | Invoice_Amount |
++------------+--------------+-------------+--------+----------------+
+|      10002 | 2017-10-05   |        3002 |   1001 |         6560.2 |
+|      10007 | 2017-09-10   |        3005 |   1002 |         9480.5 |
+|      10008 | 2017-09-10   |        3002 |   1001 |           5760 |
+|      10011 | 2017-08-17   |        3003 |   1007 |        7500.29 |
++------------+--------------+-------------+--------+----------------+
+4 rows in set (0.094 sec)
+/***************************************************/
+
+
+
+
+
+Write a SQL Query to retrieve the details of the Sales Rep like Rep_ID, Name, City ,Commision who are from city that ends with ‘i’.
+/******************************************************/
+MariaDB [sales_management]> select *from Sales_Rep where City like '%i';
++--------+-------------+-----------+-----------+
+| Rep_ID | Name        | City      | commision |
++--------+-------------+-----------+-----------+
+|   1001 | Anthony G   | New Delhi |      0.25 |
+|   1003 | Santhosh    | Mumbai    |      0.12 |
+|   1005 | Jaya Prasad | Chennai   |      0.11 |
++--------+-------------+-----------+-----------+
+3 rows in set (0.001 sec)
+/*******************************************************/
+
+
+
+
+
+PROJECTION
+
+Write a SQL statement to display specific columns like name, city and commision for all the salesmen.
+/***************************************************/
+MariaDB [sales_management]> select Name, City, commision from Sales_Rep;
++-------------+-----------+-----------+
+| Name        | City      | commision |
++-------------+-----------+-----------+
+| Anthony G   | New Delhi |      0.25 |
+| Rejina R    | Bangalore |      0.15 |
+| Santhosh    | Mumbai    |      0.12 |
+| Jaya Prasad | Chennai   |      0.11 |
+| Diptish     | Kolkatta  |      0.12 |
+| Abbas       | Hyderabad |       0.1 |
++-------------+-----------+-----------+
+6 rows in set (0.000 sec)
+/***************************************************/
+
+
+
+
+
+Write a query to display all the details of the Invoice like Invoice_Date, Rep_ID, Invoice_ID and Invoice_Amount.
+/*****************************************************/
+MariaDB [sales_management]> select Invoice_Date, Rep_ID, Invoice_ID, Invoice_Amount from Invoice;
++--------------+--------+------------+----------------+
+| Invoice_Date | Rep_ID | Invoice_ID | Invoice_Amount |
++--------------+--------+------------+----------------+
+| 2017-10-05   |   1002 |      10001 |         1500.5 |
+| 2017-10-05   |   1001 |      10002 |         6560.2 |
+| 2017-10-10   |   1003 |      10003 |         2480.4 |
+| 2017-08-17   |   1003 |      10004 |         1100.5 |
+| 2017-07-27   |   1001 |      10005 |         2400.6 |
+| 2017-09-10   |   1002 |      10007 |         9480.5 |
+| 2017-09-10   |   1001 |      10008 |           5760 |
+| 2017-09-10   |   1005 |      10009 |         2700.6 |
+| 2017-10-10   |   1006 |      10010 |        1983.43 |
+| 2017-08-17   |   1007 |      10011 |        7500.29 |
+| 2017-06-27   |   1002 |      10012 |        2500.45 |
+| 2017-04-25   |   1001 |      10013 |         3045.6 |
++--------------+--------+------------+----------------+
+12 rows in set (0.000 sec)
+/*****************************************************/
+
+
+
+
+
+Group By , Order By Clauses
+
+Write a SQL Statement to fetch the Details Consumer like Consumer_ID, Consumer_Name , City , Grade in alphabetical order of Name.
+/******************************************************/
+MariaDB [sales_management]> select Consumer_ID, Consumer_Name, City, Grade from Consumer order by Consumer_Name;
++-------------+---------------+-----------+-------+
+| Consumer_ID | Consumer_Name | City      | Grade |
++-------------+---------------+-----------+-------+
+|        3007 | Harish Manana | New Delhi | 200   |
+|        3005 | James         | Bangalore | 200   |
+|        3001 | Mary          | Chennai   | NULL  |
+|        3002 | Nirav Parmar  | New Delhi | 100   |
+|        3008 | Rajesh Kumar  | Bangalore | 300   |
+|        3003 | Ram Sangeeth  | Hyderabad | 200   |
+|        3009 | Sharon George | Mumbai    | 100   |
+|        3004 | Somsubhra     | Kolkatta  | 300   |
++-------------+---------------+-----------+-------+
+8 rows in set (0.000 sec)
+/******************************************************/
+
+
+
+
+
+Problem Statement [JDBC API]
+
+1. Write a Java code to retrive Sales_Rep details using JDBC API. [Hint : DriverManager, Connection, Statement, ResultSet]
+
+Solution: RetriveSales_Rep.java
+
+
+
+2. Write a Java code to store Sales_Rep details using JDBC API. [Hint : DriverManager, Connection, PreparedStatement, ResultSet]
+
+Solution: StoreSales_Rep.java
+
+
+

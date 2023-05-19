@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  neo4j-db:
+    image: neo4j
+    environment:
+      NEO4J_AUTH: neo4j/secret
+    ports:
+      - '7474:7474'
+      - '7687:7687'
+  webapp:
+    depends_on:
+      - neo4j-db
