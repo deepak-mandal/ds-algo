@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jan 20 15:44:08 2021
+
+@author: deepak
+"""
+
+import pandas as pd
+data={'states': ['ohio', 'ohio', 'ohio', 'nevda', 'nevda'],
+      'year': [2000, 2001, 2002, 2001, 2002],
+      'pop': [1.5, 1.7, 3.6, 2.4, 2.9]}
+
+frame=pd.DataFrame(data)
+print(frame)
+print()
+frame1=pd.DataFrame(data, columns=['year', 'states', 'pop'])
+print(frame1)
+print()
+frame2=pd.DataFrame(data, columns=['year', 'states', 'pop', 'debt'],
+                    index=['one', 'two', 'three', 'four', 'five'])
+print(frame2)
+print('-------------------------------------')
+print(frame2.columns)
+print()
+print(frame2['states'])
+print('++++++++++++++++++++++++++++++++++++++')
+print(frame2.year)
+print('**********************************')
+#print(frame2.ix['three'])
+print('////////////////////////////////////////////')
+print(frame2)
+print()
+frame2['debt']=16.6
+print(frame2)
+
+import numpy as np
+print()
+frame2['debt']=np.arrange(5.0)
+print(frame2)
+
+
+
+
+
+
+
+
+
+
+
+
+
