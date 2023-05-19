@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+
+	<!--Question 1: Dependency injection using setters -->
+	<bean id="cust" class="com.cgi.Customer">
+	<property name="custId" value="2014"></property >
+	<property name="custName" value="Deepak"></property>
+	<property name="orderValue" value="12800"></property>
+	</bean >
+
+	<!--Question 2. Dependency injection using constructor-->
+	<bean id="prod" class="com.cgi.Product">
+	<constructor-arg type="int" value="2017"></constructor-arg >
+	<constructor-arg type="String" value="Vivo Smart Phone"></constructor-arg >
+	<constructor-arg type="int" value="1"></constructor-arg >
+	<constructor-arg type="double" value="2222.25"></constructor-arg >
+	</bean >
+	
+	<!--Question 3. Dependency Injection using Collection-->
+	<bean id="asc" class="com.cgi.Associate">
+	<property name="associateId" value="101"></property>
+	<property name="associateName" value="Software"></property>
+	<property name="roles">
+	<list>
+		<value>Software Engineer</value>
+		<value>Developer</value>
+		<value>Prof</value>
+		<value>Dean</value>
+	
+	</list>
+	</property>
+	
+	</bean >
+	
+</beans>
