@@ -1,0 +1,58 @@
+
+<h1>Registration Page</h1>
+<hr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+</head>
+<body>
+    
+<div class="container">
+  
+    <form [formGroup]="regForm" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" class="form-control" name="email" formControlName="email">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" formControlName="name">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Age</label>
+            <input type="number" class="form-control" name="age" formControlName="age">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">City</label>
+            <input type="text" class="form-control" name="city" formControlName="city">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Gender</label>
+            <input type="text" class="form-control" name="gender" formControlName="gender">
+          </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" formControlName="password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Register</button>
+        <!--<button type="submit" class="btn btn-primary" [routerLink]="['/dashboard']">Register</button>-->
+    </form>
+    
+
+
+</div>
+
+  
+</body>
+</html>

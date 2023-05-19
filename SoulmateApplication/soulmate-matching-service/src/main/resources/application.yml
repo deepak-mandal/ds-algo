@@ -1,0 +1,12 @@
+rabbit:
+  QUEUE_NAME: myqueue
+  EXCHANGE_NAME: myexchange
+  ROUTING_KEY: myroutingkey
+spring:
+  neo4j:
+    uri: neo4j://localhost:7687
+    authentication:
+      username: neo4j
+      password: secret
+server:
+  port: 8083

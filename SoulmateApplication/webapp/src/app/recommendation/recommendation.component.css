@@ -1,0 +1,21 @@
+.recommendation-card-container{
+    display: flex;
+    /* justify-content: space-around; */
+    overflow-x: auto;
+    margin: 1vw;
+}
+
+.recommendation-card-container > mat-card{
+    margin-top: 0.5vw;
+    margin: 0.5vw;
+    min-width: 10vw;
+    max-width: 15vw;
+    text-align: center;
+    /* width: 10vw; */
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
