@@ -1,0 +1,159 @@
+scematic -> head element, footer element
+
+
+<span> -> inline element
+<div> -> block element
+
+em => emphasized
+u -> underline
+i
+b
+strong
+s-> strick through 
+<small>
+<big> -> big text
+
+<sub> => base log kind
+<sup> => power
+
+
+
+
+margin -> invisible space outside the boader
+
+
+
+
+
+
+
+
+
+selector=> class, id, element
+
+
+
+
+absolute:- you can move the element. it will measure from top & left not from the parent element
+position: absolute;
+
+
+
+
+relative=> it will measure from the parent element. it move moves the element will relative to parent class
+position:relative
+
+
+
+
+fixed=> it will remain on top and fixed even if you scroll the page
+position:fixed
+
+
+
+
+sticky=> when the navbar is reach at 3px(top:3px) then it will remain there it won't move further
+
+
+
+
+selector childname
+
+.parent p{
+    //all the child
+}
+
+
+.parent >p{
+    //immediate child only affected
+}
+
+
+.parent >div>p{
+    //after immedite
+}
+
+
+
+.parent +p{}
+
+.parent ~p{
+    //for siblings
+}
+
+
+
+
+
+
+div is a container so we can move whereever we want
+
+
+display:flex;
+flex is just like a container, it align the element in a row wise by default
+
+
+flex-direction: column => it will align columnwise . element are kept in column
+
+justify-content: center => it put all at center in a column
+
+
+align-item:center => item align at center
+
+
+border-collapse: collapse => to make two line in single boader
+
+text-align: left => to align into the left
+
+
+
+box-shadow: gray 5px 5px 5px 5px => (x-axis, y-axis, blur or split of shadow, intensity of shadow)
+
+-5px => shadow move to left side
+*-> for all
+
+
+font-weight: bold
+
+
+wrap => for responsive page (automatically convert into responsive design)
+flex-wrap: wrap;
+
+
+
+100px means upto text only (covers only upto text length)
+100% means whole width or whole row
+
+
+
+
+
+
+parallax effect => when we scroll image will be there in background vut the text get scrolling
+
+vh => viewport height
+em=> what ever size of the text will increase to 5 times of original text :- 5em
+
+
+
+vw
+
+
+text-decoration: none => even if it is a hyperlink then it won't shadow
+
+
+background-attachement: fixed => parallax effect
+
+
+.section1{
+    background-image: url("/image/img.jpg");
+    background-attachement: fixed;
+    height: 60vh;
+    text-align: center;
+}
+
+
+
+
+
+

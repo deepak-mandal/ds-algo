@@ -1,0 +1,13 @@
+reduce function => if there is a value then it will add the value else it will just add 0
+
+const totalsum =(reduce{}, 0);
+
+
+callback & promise
+
+function sum(num1, num2, cb){
+    return cb(num1+num2);    //cb=> callback
+}
+
+
+
