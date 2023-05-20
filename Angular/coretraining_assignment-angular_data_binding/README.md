@@ -9,27 +9,14 @@ Assignment on data Binding (09/11/2021):<br>
 <hr>
  3. Create an angular component that displays two buttons namely like, dislike and also an element to display count. The like count must be <br>incremented by one when the like button is clicked and decremented when the dislike button is clicked. The count must not decreased below 0. <br>    
  <hr>
- <div align="center">
-<img src="img/1.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/2.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/3.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/4.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/5.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/6.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="img/7.png" alt="Screenshot-result/1.png">
-</div>
+ 
+ ![1](https://github.com/deepak-mandal/ds-algo/assets/55249860/b1ff9c87-ed25-4972-93b5-c4bb5ac4cbf9)
+![2](https://github.com/deepak-mandal/ds-algo/assets/55249860/1184bffd-3915-4785-8102-a6d70bd2d8a5)
+![3](https://github.com/deepak-mandal/ds-algo/assets/55249860/286e69e2-6e0d-4fff-870a-e4bd1b796bce)
+![4](https://github.com/deepak-mandal/ds-algo/assets/55249860/23bae0ad-b1be-49ef-894a-fe2319da2c4a)
+![5](https://github.com/deepak-mandal/ds-algo/assets/55249860/2edf8d97-6f66-427a-a890-6f093f7a5ffd)
+![6](https://github.com/deepak-mandal/ds-algo/assets/55249860/787e92fb-f3b5-4a58-b01e-67069e3f6890)
+![7](https://github.com/deepak-mandal/ds-algo/assets/55249860/907b4c98-2038-4e3c-a88a-c11dd64ab0f6)
 
 # MyApp
 
