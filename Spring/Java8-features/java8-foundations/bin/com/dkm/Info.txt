@@ -1,0 +1,21 @@
+To set path variable
+
+In system variables
+new=> MAVEN _HOME = C:\soft\apache_maven-3.6.3
+in path; add; C:\soft\apache-maven-3.6.3\bin
+=> ok
+now check in cmd; mvn -v
+
+
+
+-----------------------------------------------
+JDBC:- java database connectivity
+
+API:- application programming interface
+
+
+
+
+
+
+

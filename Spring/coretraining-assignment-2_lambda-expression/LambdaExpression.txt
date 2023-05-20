@@ -1,0 +1,35 @@
+Lambda expression 
+-> A concept that can help achieving functional programming feature
+
+
+lambda exp. can be used for functional interface
+
+functional interface=> an interface with only one abstract method
+
+
+* lambda exp can not be used for abstract/regular classes and also interface with more than one abstract method
+
+
+
+
+() -> {}
+
+
+
+
+
+Predefined functional interfaces
+1. Predicate <T> => can accept any type but returns only boolean. ==> test() method
+2. Function<T, R> => can take any input and return any type of output ==> apply() method
+3. Consumer <T> => can take a single arg of anytype but doesn't return (just consume)  ==> accept() method
+4. Supplier<R> => No argument but only return any type ==> get() method
+5. BiConsumer<T, U> => can take two arguments but doesn't return anything ==> accept() method
+
+
+
+
+
+functional interface consists of only one method
+
+
+

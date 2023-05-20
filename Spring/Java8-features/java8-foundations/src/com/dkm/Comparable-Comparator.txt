@@ -1,0 +1,2 @@
+Comparable -> Natural ordering (sorting)
+Comparator -> Customized ordering (sorting)
