@@ -5,6 +5,7 @@
 <br/>
 <h1>Web Design of Native place</h1>
 <b>Result:-</b>
+
 ![1](https://github.com/deepak-mandal/ds-algo/assets/55249860/cfa1750f-5b0c-4d41-860d-c7b3fe012124)
 ![2](https://github.com/deepak-mandal/ds-algo/assets/55249860/ccab1080-7722-417a-877b-bf7665729cb3)
 ![3](https://github.com/deepak-mandal/ds-algo/assets/55249860/67bfb824-b975-465f-b1a6-d3477adb9935)
