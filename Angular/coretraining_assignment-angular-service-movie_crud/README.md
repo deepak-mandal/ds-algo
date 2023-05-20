@@ -10,30 +10,15 @@
 <br>name:string
 <br>langauge:string
 <br>rating:string</P><hr>
-<div align="center">
-<img src="crud/1.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/2.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/3.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/4.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/5.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/6.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/7.png" alt="Screenshot-result/1.png">
-</div>
-<div align="center">
-<img src="crud/8.png" alt="Screenshot-result/1.png">
-</div>
+
+![1](https://github.com/deepak-mandal/ds-algo/assets/55249860/fbd14e1d-6071-4e72-b305-e831c673a722)
+![2](https://github.com/deepak-mandal/ds-algo/assets/55249860/a0e2849a-0223-4664-b10b-499b90ab0768)
+![3](https://github.com/deepak-mandal/ds-algo/assets/55249860/c0408517-2cc6-4933-9b20-aec7b0a72007)
+![4](https://github.com/deepak-mandal/ds-algo/assets/55249860/4f8b7288-5069-43b2-8e51-bb0188ac8b58)
+![5](https://github.com/deepak-mandal/ds-algo/assets/55249860/891280ad-39e0-4cec-9455-bb80be55acd5)
+![6](https://github.com/deepak-mandal/ds-algo/assets/55249860/eb02a649-1142-4b9c-939b-877f3c290204)
+![7](https://github.com/deepak-mandal/ds-algo/assets/55249860/547c355e-4af5-4a72-9038-349a04f4ca4d)
+![8](https://github.com/deepak-mandal/ds-algo/assets/55249860/3d2199e9-aab0-4194-ac2c-14a194e2068f)
 
 
 # MovieService
