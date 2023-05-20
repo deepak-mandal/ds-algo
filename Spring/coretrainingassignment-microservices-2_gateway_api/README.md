@@ -13,7 +13,8 @@ Client Request must be accessed from the Gateway API <br>
 <br>
 Push the code in a repo and give the access.<br>
 <hr>
-<img src="img/1.png" alt="result screenshot">
-<img src="img/2.png" alt="result screenshot">
-<img src="img/3.png" alt="result screenshot">
-<img src="img/4.png" alt="result screenshot">
+
+![1](https://github.com/deepak-mandal/ds-algo/assets/55249860/618af2bd-5896-41f3-bf4a-a424cee926ac)
+![2](https://github.com/deepak-mandal/ds-algo/assets/55249860/106fc928-d608-478e-ac3e-ca94e92b7354)
+![3](https://github.com/deepak-mandal/ds-algo/assets/55249860/531ca585-a929-44be-ba37-6543b57b1144)
+![4](https://github.com/deepak-mandal/ds-algo/assets/55249860/e140bf4b-3206-4806-aaf9-e242e9a45ae4)
