@@ -1,0 +1,198 @@
+TypeScript
+
+to compile: tsc MyFirstScript.ts
+to execute: node MyFirstScript.js
+
+
+
+
+
+
+Angular (is a component based)=> SPA (Single page application) => are made up of several components => every component on the page get updated automatically
+
+
+//to create angular project
+ng new angular_project_name
+
+//to create component
+ng g c header
+
+
+
+
+
+//to execute angular project (goto inside folder)
+ng serve -o
+
+
+
+
+
+ng --version
+
+
+
+to create service 
+ng g s service_name
+
+
+
+
+to create class
+ng g class class_name
+
+
+
+data binding
+1. interpolation => convert everything into strig while printing {{}}
+
+
+property binding []] => <img [src]= "imageUrl" alt="">
+
+data binding  [advantage is very fast] => <img src="{{imageUrl}}" alt="">
+
+
+event binding () => (click)="displayAlert()"
+
+
+static binding: class="background-style"
+
+
+dynamic binding => [class.background] = "true"
+
+two way binding: [(ngModel)]
+
+
+
+
+
+
+
+
+
+
+
+Angular forms:-
+1. Reactive forms=> responsibility given to model , more effective, sutaible for complex form task
+2. Template driven => responsibility given to HTML - very fast, but easiest form, sutaible for basic task
+
+
+
+
+
+ng test
+
+
+Reactive form
+in .HTML;
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<input type="text" formControlName="name">
+<button type="submit">Submit</button> 
+</form>
+
+in ts;
+contactForm = new FormGroup({
+    "name": new FormControl('', [Validators.required, Validators.minlength(5)])
+})
+
+onSubmit(){
+    console.log(this.contactForm.value);
+    console.log(this.contactForm.status);
+}
+
+
+
+
+
+
+
+
+Template form
+in HTML
+<form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+<input type="text" name="firstname" ngModel>
+<button>submit</button>
+</form>
+
+in ts
+firstname=""
+
+onSubmit(contactForm:any){
+    console.log(contactForm.value);
+}
+
+
+
+
+
+
+
+
+
+
+angular pipe |
+-> works like a filter
+
+
+
+date
+full date: {{today| date:'fullDate'}}
+long date: {{today | date:'longDate'}}
+short date: {{today|date:'shortDate'}}
+
+
+
+
+
+
+{{num | number "2.2-3"}}
+num | datatype filter_condition -> "atleast 2 digit to be display . minimum 2 digit - maximum 3 digit at the leftside"
+
+
+
+
+
+currency
+
+currency: {{money|currency: 'CAD': 'symbol-narror': '3.3-4'}}
+capital letter: {{name|uppercase}}
+small letter: {{name: lowercase}}
+titlecase lettter: {{name|titlecase}}
+JSON object: {{studentDetails | json |uppercase}}
+
+
+
+
+
+
+
+
+
+
+
+//creation of new module
+ng generate module products-feature --module=app
+
+(products-feature is new module name, module=app means linked with parent module i.e.; app.module.ts)
+in products-feature.module.ts
+add =>
+exports:[
+    ProductComponent //any component
+]
+
+
+
+
+
+//creation of shared module
+ng g m shared --module=products-feature
+(here module=products-feature indicate that it is associate with product-feature.modules)
+(so now we can remove commonModule from "products-feature" because this "common module" is already present in the "shared module" => so code reduced)
+
+
+
+
+
+
+
+
