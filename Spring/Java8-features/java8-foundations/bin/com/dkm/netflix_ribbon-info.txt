@@ -1,0 +1,23 @@
+Netflix Ribbon (client side load balancer)
+
+
+
+
+user application ----> | chatboat - 8001
+   (9090)              | chat bot - 8002
+                       | chatbot - 8003
+                     ribbon
+                     
+                     
+                     => when one port is busy then it is switching to another port
+                     so there will not be any single point of delay
+                     
+                     
+                     
+                     /invokes
+                      for first time 8001
+                     then 2nd time 8002
+                     then 3rd 8083
+                     then 4th 8001
+                     => so it will comes as rounded so in ribbon formed so load will be balance
+                      

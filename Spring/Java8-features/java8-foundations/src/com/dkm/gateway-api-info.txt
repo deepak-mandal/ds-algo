@@ -1,0 +1,33 @@
+Gateway API service
+=> using the url path
+
+
+
+product service ->1
+trader service ->2
+2 microservice
+so whenever the request is comming we have to route
+
+
+while creating the gateway service project 
+add gateway + spring web
+
+
+
+
+Gateway API (server-side load balancer)
+
+client -> front office -> | -> HR
+                          | -> FINance
+                          | -> admin
+                          | -> purchase
+
+                          
+                          
+                          
+reason for one way entry is security, validate geniune, etc.
+
+
+An api gateway is a management tool that sits between a client and a collection of backend services each with it's own api
+
+the api gateway acts as a single point of entry for a defined group of apis

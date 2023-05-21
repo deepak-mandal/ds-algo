@@ -1,0 +1,8 @@
+@NoArgsConstructor -> for default constructor
+@AllArgsConstructor -> for parametrized constructor
+@Getter -> for getter method
+@Setter -> for setter mthods
+
+leads to simplification of components do it reduce the line of code
+
+

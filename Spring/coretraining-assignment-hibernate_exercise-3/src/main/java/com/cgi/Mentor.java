@@ -3,6 +3,36 @@ package com.cgi;
 /* Name: Deepak Kumar Mandal
  * Email: dkm.iit.g@gmail.com
  * Hibernate Exercise -3
+ * 
+ 
+ ORM tools -> (Hibernate Framework)
+ Object Relational Mapping
+ Usage of ORM is to create incompatible Data types
+
+
+ Java Object 
+ ------------
+ Employee e = new Employee();
+ e -> object
+
+ Employee:-
+ empId -> int
+ ename -> string
+ salary -> int
+
+
+ Database
+ ---------
+ Employee:-
+ empId -> int
+ ename -> varchar
+ salary -> int
+
+ * to relate java datatype into database data type ; we need object relation mapping 
+ * => for this we will use Hibernate Framework
+
+
+ 
 
 Create a Model class Mentor with the following Attribute and Insert record
     id, name, tech

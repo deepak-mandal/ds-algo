@@ -11,6 +11,31 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
    2. SchoolService -------8081
    3. StudentService-------8082
 
+
+
+In microservice -> all the microservice is linked with "EurekaServer"
+-> and all the microservice is communicating to each other & has a copy of data so no won't be failure even if the one of the server is down
+
+while creating project add 1. spring web, 2. eureka server
+
+
+port no of eureka server is 8761
+client application & will register the eureka server
+
+
+
+
+for clent service -> will get registered with eureka server
+while creating project add 1. spring web 2. eureka discovery client
+
+
+
+in client service => @EurekaDiscoveryClient
+
+
+
+
+
  * */
 
 @EnableEurekaServer

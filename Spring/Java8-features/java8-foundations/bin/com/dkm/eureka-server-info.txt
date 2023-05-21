@@ -1,0 +1,5 @@
+Eureka server -> centralized server configuration where we can register multiple microservice
+
+
+
+
