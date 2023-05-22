@@ -1,0 +1,43 @@
+Message Broking Archeticure (service)
+-> called RabbitMQ or ActiveMQ (send and recieve the message; acts as postman)
+eg. Kafka(used to exchange the message between two services)
+
+
+activeMQ -> is written in java
+
+-> it is stored in form of queue
+
+
+producer-> who send te data /information
+consumer-> is user application that recieved the message
+
+
+RabbitMQ 
+--------
+port no: 15672
+username: guest
+password: guest
+
+in ternimal 
+-----------
+sudo service rabbitmq -server status
+
+click on get message
+in exchange
+in queue -> click on
+the message will be display once another service will consume
+
+-> whenever the consumer is running then message will consume immediatly so stop consumer and run producer and see get message in queue
+
+
+
+
+
+
+
+
+
+
+
+
+

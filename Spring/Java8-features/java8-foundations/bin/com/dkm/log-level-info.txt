@@ -1,0 +1,11 @@
+spring support 5 default log level
+1. error (most urgent default log level in SLF4J)
+2. warn 
+3. info (default log level configuration
+4. debug
+5. trace
+
+
+(only warn and error message logger should be active in production mode thus saving storage capacity and performance
+
+)
