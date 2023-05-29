@@ -7,9 +7,7 @@ import java.util.List;
 public class ArrayListExample {
 
 	public static void main(String[] args) {
-		List
-		
-		<String> nameList = new ArrayList<>();
+		List <String> nameList = new ArrayList<>();
 		nameList.add("Tina");
 		nameList.add("Rosy");
 		nameList.add("John");

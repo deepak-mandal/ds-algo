@@ -1,0 +1,119 @@
+ArrayList
+..........
+
+
+void add(int index, Object element):- insert the specified element at the specified position in the list
+
+boolean add(Object o) -> appends the specified element to the end of this list
+
+
+boolean addAll(collection) -> appends all of the element in the specified collection to the end of this list, in the order that they are returned by the specified collection iterators
+
+
+boolean addAll(int index, collection c) => 
+
+
+
+void clear() -> to remove all the element from the list
+
+
+boolean contains(Object element) -> returns true if the list contains the specified element
+
+
+
+Object get(int index) -> returns the element at the specified position in the list
+
+
+
+
+
+Set
+===
+HashSet methods
+...............
+
+boolean add(Object element) -> adds the specified element to this set if it not already present
+
+
+void clear() -> removes all of the element from this set
+
+
+boolean contains(Object o) -> returns true if this set contains the specified element
+
+
+boolean isEmpty() -> returns true if this set contains no elements
+
+
+boolean remove(Object o)-> removes the specified element from this set if it is present
+
+
+int size() -> returns the no. of element in the set {set.size()}
+
+
+
+
+TreeSet=> sorted collection => objects can be inserted in any order but are retrived in a sorted order
+
+
+
+
+
+Map
+===
+entrySet -> returns a set of all the key-value pair
+
+keySet -> returns a set of all the keys in the map
+
+
+values -> returns a collection of values in the map
+
+
+TreeMap -> orders the keys
+--------------------------
+HashMap -> stores the key in a hash table (HashMap class is generally preferred for its efficiency (speed) unless sorted keys are needed)
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+void clear() -. removes all mapping from this map
+
+boolean containsKey(Object key) -> returns true if this map contains a mapping for the specfied key
+
+
+boolean containsValue(Object value) -> returns true if this map maps one or more keys to the specified value
+
+
+Set entrySet() -> returns a set view of the mapping contained in this map
+
+Object get(Object Key) -> returns the value to which map maps the specified key
+
+Set keySet() -> returns a set with all the keys contained in the map
+
+
+Object put(Object key, Object value) -> Associates the specified value with the specified key in the map
+
+
+
+void putAll(Map t) -> copies all of the mappings from the specified map to this map
+
+
+
+Object remove(Object key) -> Remove the mapping for this key from this map if it is present
+
+
+int size() -> returns the number of key-value mapping in this map
+
+
+Collection values() -> returns a collection with all the values contained in this map
+
+
+
+
+
+
+ 
+
+
+
+vo
+
+ 
