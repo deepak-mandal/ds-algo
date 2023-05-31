@@ -24,6 +24,11 @@ boolean contains(Object element) -> returns true if the list contains the specif
 Object get(int index) -> returns the element at the specified position in the list
 
 
+size()
+
+
+
+
 
 
 
@@ -68,6 +73,10 @@ keySet -> returns a set of all the keys in the map
 values -> returns a collection of values in the map
 
 
+
+
+
+
 TreeMap -> orders the keys
 --------------------------
 HashMap -> stores the key in a hash table (HashMap class is generally preferred for its efficiency (speed) unless sorted keys are needed)
@@ -108,12 +117,10 @@ Collection values() -> returns a collection with all the values contained in thi
 
 
 
+To get the max value of HashMap:- 
+int max = Collections.max(map.values());
 
 
- 
 
-
-
-vo
 
  
