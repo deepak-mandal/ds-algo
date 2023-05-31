@@ -1,0 +1,996 @@
+local variable are stored in stack (short term memory)
+
+
+instance variable/field are stored in longer term memory (heap)
+
+
+for string ""
+for char '' => inside single quote only to consider as char
+
+
+
+String[] words = paragraph.split("\\s+"); =>  to split based on multiple space. it also works for single space
+
+
+
+---------------------
+.java => {{java compiler}} => .class(byte code) => {{JVM}} => window/linux/mac
+
+
+the same bytecodes gives the same result makes java a platform independent language (write once, run anywhere)
+
+
+
+JDK = JRE + Development tools
+
+JRE = JVM + set of libraries (.jar) + other additional files
+
+
+
+
+=========================================================
+
+
+
+
+
+
+
+JDK - java development kit
+javac program_name.java
+>>program_name.class
+	bytecode
+			runs on JVM-java virtual machine
+			
+			
+			
+			
+			
+//to compile and execute the code
+cmd
+get the location where file is located
+-compile the code as 
+	javac TestProgram.java
+-to execute the code 
+	java TestProgram
+	
+output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//single line comment
+
+
+/* Multi line comment
+* comment on one or more line
+*/
+
+
+
+/** java documentation comment
+* can also span one or more lines
+*/
+
+
+
+
+
+Data type	size (in bytes) 	Default value
+byte		1					0
+short		2					0
+int 		4					0
+long		8					0
+float		4					0.0
+double		8					0.0
+char		2(UNICODE)			\u0000
+boolean		depends on jvm		false
+
+
+
+formula for signed datatype = -2^(n-1) to 2^(n-1)-1
+
+formula for Unsigned datatype = 0 to 2^n - 1
+
+
+
+
+
+
+Casting and conversion
+------------------------
+
+Implicit conversion:-
+char c = "v";
+int i = c;
+
+
+
+
+
+Explicit conversion:-
+long val = 10;
+int x = (int) val;
+
+
+
+
+
+
+
+
+Arithmetic and unary operators
+
++
+-
++
+/
+%
+++
+--
+
+
+
+Relational operators
+==
+!=
+>
+<
+>=
+<=
+
+
+
+Bitwise operators
+
+& 
+|
+^
+~
+<<
+>>
+>>>
+
+
+
+
+
+logical operators
+&&
+||
+!
+
+
+
+
+Assignment operators
+=
++=
+-=
+*=
+/=
+%=
+<<=
+>>=
+&=
+^=
+|=
+
+
+
+
+
+
+
+
+
+conditional operators (?:)
+---------------------------
+variable x = (experation)? value if true : value if false
+
+
+
+
+
+
+instanceOf operator
+------------------
+(Object reference variable) instanceOf(class/interface type)
+
+
+
+
+
+
+Precedence and associativity
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if-else
+-------
+
+if(condition){
+// true part
+}
+else{
+//false part
+}
+
+
+
+
+
+
+
+Nested if
+---------
+if(condition1){
+	if(conditions2){
+	//true part of both condition
+	}
+	else{
+	// false part of condition2
+	}	
+}
+else{
+	//false part of cond1
+}
+
+
+
+
+
+
+
+
+
+
+
+
+switch case
+-----------
+
+
+switch(parameter){
+	case 1:
+		//blocak executed when parameter =1
+		break;
+	case 3:
+		//
+		break;
+	default:
+		//block executed when the int parmeter value does not match any specific value
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+while loop
+-----------
+
+int count =1;
+while(count <11){
+	system.out.println(count);
+	count++;
+}
+
+
+
+
+
+
+
+
+
+
+do while loop
+-------------
+
+int count =1;
+do {
+	system.out.println(count);
+	count++;
+}while(count<11);
+
+
+
+
+
+
+
+
+
+ 
+ 
+ for loop
+ ---------
+ 
+ for(int i=1; i<11; i++){
+ 	System.out.println("count is: "+ i);
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ break statement
+ ----------------
+ 
+ int a=0, b=1, c=0, cnt=2;
+ System.out.println(a+ ", "+b);
+ while(cnt<20){
+ c=a+b;
+ 
+ if(c%11 ==0)
+ 	break;
+ 	
+ cnt++;
+ a=b;
+ b=c;
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ continue statement
+ -------------------
+ 
+ int a=0, b=1, c=0, cnt=2;
+ System.out.println(a+ ", "+b);
+ while(cnt<20){
+ c=a+b;
+ 
+ if(c%11 ==0)
+ 	continue;
+ 	
+ cnt++;
+ a=b;
+ b=c;
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ labeled statement
+ -----------------
+ boolean isTree =true;
+ outer:
+ 	for(int i=0; i<5; i++){
+ 		while(isTrue){
+ 			System.out.println("hello");
+ 			break outer;
+ 		}//end of the inner while loop
+ 		System.out.println("Outer loop"); //won't print
+ 	}//end of outer for loop
+ System.out.println("good bye");
+ 
+ 	
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Output statement
+ ----------------
+ System.out.println()
+ System.out.print()
+ System.out.printf()
+
+
+
+
+
+
+
+
+Escape sequence
+------------------
+\n :- newline
+\' => single quote
+\""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+printf
+------
+
+
+%[argument_index$][flags][width][.precision]conversion character 
+
+
+
+.s   formate string
+.d format decimal integer
+.f => format the floating point number
+.c => format character
+.t => format time/date value
+.n => line separator
+
+
+
+
+
+
+
+
+
+
+
+
+
+Read input from user
+--------------------
+
+Scanner   //import java.util.Scanner;
+ 
+ Scanner sc = new Scanner(System.in);
+ 
+ int id = sc.nextInt();
+ sc.nextLine(); //capture the newline {enter key}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ nextInt() => integer
+ nextFloat() -> float
+ nextDouble() => double
+ nextLong() => long
+ nextShort() => short
+ nextBoolean() => boolean
+ next() => single word - string without space
+ nextLine() => string with spaces
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ class & object
+ --------------
+ class
+ -----
+ 
+ public class Book{
+ String name;
+ String author;
+ }
+ 
+ 
+ Object
+ ------
+ Book objBoook = new Book();
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Accesssor :- method used to return the value of a private field -> getter 
+ 
+ Mutator:- method used to set a value of a private field -> setter
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Access Specifier
+ ----------------
+ 
+ public :- classes, methods and fields declared as pubic can be accessed from any class in an application
+ 
+ private:- private methods and field can only be accessible within the same class to which the methods and fields belong
+ 
+ protected:- 
+ 
+ default (no specifier, hence no keyword default):- can be accessible only with the same package, but not frpm outside this package
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ constructor => default constructor & parameterized constructor
+ 
+ 
+ 
+ 
+ this keyword
+ -------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ constructor overloading
+ ------------------------
+ a class can have any number of constructor but they should differ in the parameter list. this technique is called constructor overloading
+ 
+ the parameter list should vary in any of the following:-
+ 1. number of parameter
+ 2. type of parameter
+ 3. order of parameter
+ 
+ 
+ -> the compiler identifies which constructor is to be invoked based on the number of parameters in the list and their type
+ 
+ 
+ 
+ 
+ 
+ Static in java
+ --------------
+ 
+ 
+ 
+ 
+ 
+ Primitive 	wrapper class
+ byte		Byte
+ short 		Short
+ int		Integer
+ long		Long
+ float		Float
+ double		Double
+ char		Character
+ boolean	Boolean
+ 
+ 
+ 
+ 
+ 
+ Wrapping
+ ---------------
+ int a=10
+ Integer it1= new Integer(a)
+ //Unwraping
+ int b = it1.intValue()
+ 
+ 
+ 
+ 
+ Autoboxing
+ ---------
+ converting a primitive value into an object of the corresponding wrapper class
+ Integer i=10;
+ 
+ 
+ Unboxing
+ -------
+ Integer i=10; //boxing
+ int y = i; //unboxing
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Date
+ ------
+ java.util package
+ java.sql package
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Calendar 
+ --------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Arrays 
+ ------
+ 
+ Arrays holds homogeneous set of values
+ 
+ int a[] = new int[12];
+ 
+ 
+ 
+ array_name.length  //length property
+ 
+ 
+ 
+ 
+ 2D array
+ -------
+ int matrix[][] = new int[3][3]
+ 
+ char names[][] = new char[3][]   //jagged array
+ 
+ 
+ 
+ Arrays.sort(int[] a)
+ 
+ Arrays.sort(int[] a, int fromIndex, int toIndex)
+ 
+ Arrays.fill(int[] a, int value)
+ 
+ 
+ Arrays.fill(int[] a, int fromIndex, int toIndex, int val)
+ 
+ 
+ 
+ Arrays.binarySearch(int[] a, int key)
+ 
+ Arrays.binarySearch(int[] a, int fromIndex, in toIndex, int key)
+ 
+ Arrays.toString(int[] a)
+ 
+ Arrays.equals(arrays1, arrays2)
+ 
+ Arrays.copyOf(originalArray, newLength)
+ 
+ Arrays.sort()
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ String
+ --------
+ string are immutable
+ 
+ String name = "mini";
+ 
+ 
+ String name2 = new String("deepak");
+ 
+ 
+ 
+ 
+ 
+ char c[] = {'d', 'e', 'e', 'p', 'a', 'k'}
+ String name = new String(c);
+ 
+ 
+ 
+ String function
+ ---------------
+ 
+ length
+ charAt
+ equals
+ substring
+ concat
+ equal
+ equalsIgnoreCase
+ toUpperCase
+ toLowerCase
+ indexOf
+ lastIndexOf
+ contains
+ startsWith
+ endsWith
+ toCharArray() =>to convert string to character array
+ replace(char old, char new)
+ split :- splits the string against given regular expression and returns a string array
+ isLetter
+ isDigit
+ isLetterOrDigit
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ == : checks for the address of the string objects to be compared
+ equals : checks for the values inside the objects to be compared
+ 
+ 
+ 
+ 
+ 
+ 
+ StringBuffer
+ -----------
+ StringBuffer is used to create a mutable string
+ (thread safe)
+ 
+ StringBuffer sb = new StringBuffer("java");
+ 
+ 
+ 
+ 
+ charAt
+ sb.length()
+ substring(int beginIndex, int endIndex)
+ sb.reverse()
+ toString:- string buffer to string
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ StringBuilder
+ -------------
+ stringBuilder method is not thread safe. 
+ StringBuilder is faster than StringBuffer
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Regular Expression
+ ------------------
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ =========================================================
+ char arr[] = inpStr.toCharArray();
+ for(char x: arr){
+ System.out.println(((Object)x).getClass().getSimpleName());
+ }
+ 
+ 
+ 
+ to convert number to respective AsciValue in character
+ System.out.println(arr[j]+" - "+(char)arr[j]);
+ 
+ 
+ 
+ to split using .
+ split("[.]");
+ 
+ 
+ 
+ 
+ integer to string datatype conversion
+ int i=200;
+ String s = Integer.toString(i);
+ 
+ 
+ 
+ 
+ 
+ char arrName[] = numStr.toCharArray();
+ 
+ 
+ 
+ 
+ 
+ 
+ character to integer value
+ char x='1';
+ int X = character.getNumericValue(x);
+ 
+ 
+ x^y => Math.pow(x, y)      ; x,y both belong to double
+ 
+ 
+ to convert negative number to it's positive value
+ int num=-1
+ num = Math.abs(num)
+ 
+ 
+ 
+ 
+ 
+ Integer to character
+ int Key=1;
+ char KeyChar = Integer.toString(key).charAt(0);
+ 
+ 
+ 
+ string to integer
+ num="200"
+ Integer.parseInt(num);
+ 
+ 
+ 
+ 
+ character array to String
+ char c[] = {"m", "i", "d"};
+ String name = new String(c);
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
