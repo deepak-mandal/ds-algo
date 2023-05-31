@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="comparable-and-comparator"/>
+	<classpathentry kind="src" path="HashcodeEqualOverride"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

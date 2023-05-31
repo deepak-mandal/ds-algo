@@ -1,0 +1,30 @@
+Non Generic class:- 
+---------------------
+public void add(Object o)
+public Object get(int index)
+
+
+
+
+Generic class:
+--------------
+public void add (E o)
+public E get(int index)
+
+
+
+
+
+equals(Object obj):- 
+------------------
+
+
+
+hashcode():- A method of object class, that returns as interger value represented by a hashing function
+(by default the hashcode() returns a random integer that is unique for each instance or object)
+
+
+*** for HashSet or HashMap, override both hashcode() and equals() methods are required. two object having the same has code doesnot imply theat tehy are equals. but two object that are equal will have same hashcode
+
+
+

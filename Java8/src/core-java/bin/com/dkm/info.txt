@@ -1,0 +1,48 @@
+
+
+comparable and comprator are used for sorting collection of objects
+
+
+
+- to apply sorting methods of arrays or collection on any user defined class, the class should implement the comparable interface
+
+
+
+
+
+comparable:
+--------------
+- comparable interface has compareTo(T obj) method - must be overriden for sorting
+
+1. we can sort the collection of object on the basic of a single element. say by id or by name, or by price
+
+2. comparable affects the original class
+
+3. CompareTo()
+
+
+
+
+
+
+
+
+
+
+
+
+
+comparator:
+------------
+- comparator interface has compare(Object o1, Object o2) method - needs to implemented for sorting
+
+1. we can sort the collection on the basis of multiple element such as id, name, price etc.
+
+2. comparator doesn't affect the original class
+
+3. compare()
+
+
+
+
+
