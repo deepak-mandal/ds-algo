@@ -18,6 +18,7 @@ port no: 15672
 username: guest
 password: guest
 
+http://localhost:15672/#/
 in ternimal 
 -----------
 sudo service rabbitmq -server status
