@@ -6,8 +6,6 @@ in path; add; C:\soft\apache-maven-3.6.3\bin
 => ok
 now check in cmd; mvn -v
 
-
-
 -----------------------------------------------
 JDBC:- java database connectivity
 

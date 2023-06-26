@@ -3,15 +3,10 @@ Unit testing => to test the exuction of the method in java, we use testing
 JUnit is testing framework in java
 version = 5.x
 
-
-
 Assertions:-
 
 assertEquals() => method is returning values like int, string, double
 
 assertTrue() => method is returning boolean values
 
-
 assertNull() => method is returning an object
-
-

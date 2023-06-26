@@ -5,7 +5,4 @@ spring support 5 default log level
 4. debug
 5. trace
 
-
-(only warn and error message logger should be active in production mode thus saving storage capacity and performance
-
-)
+(only warn and error message logger should be active in production mode thus saving storage capacity and performance)

@@ -1,14 +1,6 @@
-
-
 comparable and comprator are used for sorting collection of objects
 
-
-
 - to apply sorting methods of arrays or collection on any user defined class, the class should implement the comparable interface
-
-
-
-
 
 comparable:
 --------------
@@ -21,17 +13,6 @@ comparable:
 3. CompareTo()
 
 
-
-
-
-
-
-
-
-
-
-
-
 comparator:
 ------------
 - comparator interface has compare(Object o1, Object o2) method - needs to implemented for sorting
@@ -41,8 +22,3 @@ comparator:
 2. comparator doesn't affect the original class
 
 3. compare()
-
-
-
-
-

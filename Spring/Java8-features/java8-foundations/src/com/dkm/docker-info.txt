@@ -2,12 +2,8 @@ when our work location keep changing then we need to configure & install the sof
 so to avoid this situation
 Docker is required for storing data in seprate container
 
-
-
 to work with docker container
 sudo docker --vesion
-
-
 
 right click on projectname -> new Dockerfile
 

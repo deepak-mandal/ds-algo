@@ -4,5 +4,3 @@
 @Setter -> for setter mthods
 
 leads to simplification of components do it reduce the line of code
-
-

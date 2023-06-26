@@ -1,49 +1,28 @@
 local variable are stored in stack (short term memory)
 
-
 instance variable/field are stored in longer term memory (heap)
-
 
 for string ""
 for char '' => inside single quote only to consider as char
 
-
-
 String[] words = paragraph.split("\\s+"); =>  to split based on multiple space. it also works for single space
-
-
 
 ---------------------
 .java => {{java compiler}} => .class(byte code) => {{JVM}} => window/linux/mac
 
-
 the same bytecodes gives the same result makes java a platform independent language (write once, run anywhere)
-
-
 
 JDK = JRE + Development tools
 
 JRE = JVM + set of libraries (.jar) + other additional files
 
-
-
-
 =========================================================
-
-
-
-
-
-
 
 JDK - java development kit
 javac program_name.java
 >>program_name.class
 	bytecode
 			runs on JVM-java virtual machine
-			
-			
-			
 			
 			
 //to compile and execute the code
@@ -56,42 +35,15 @@ get the location where file is located
 	
 output
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //single line comment
-
 
 /* Multi line comment
 * comment on one or more line
 */
 
-
-
 /** java documentation comment
 * can also span one or more lines
 */
-
-
-
-
 
 Data type	size (in bytes) 	Default value
 byte		1					0
@@ -103,16 +55,9 @@ double		8					0.0
 char		2(UNICODE)			\u0000
 boolean		depends on jvm		false
 
-
-
 formula for signed datatype = -2^(n-1) to 2^(n-1)-1
 
 formula for Unsigned datatype = 0 to 2^n - 1
-
-
-
-
-
 
 Casting and conversion
 ------------------------
@@ -121,20 +66,9 @@ Implicit conversion:-
 char c = "v";
 int i = c;
 
-
-
-
-
 Explicit conversion:-
 long val = 10;
 int x = (int) val;
-
-
-
-
-
-
-
 
 Arithmetic and unary operators
 
@@ -146,8 +80,6 @@ Arithmetic and unary operators
 ++
 --
 
-
-
 Relational operators
 ==
 !=
@@ -155,8 +87,6 @@ Relational operators
 <
 >=
 <=
-
-
 
 Bitwise operators
 
@@ -169,15 +99,10 @@ Bitwise operators
 >>>
 
 
-
-
-
 logical operators
 &&
 ||
 !
-
-
 
 
 Assignment operators
@@ -194,52 +119,16 @@ Assignment operators
 |=
 
 
-
-
-
-
-
-
-
 conditional operators (?:)
 ---------------------------
 variable x = (experation)? value if true : value if false
-
-
-
-
-
 
 instanceOf operator
 ------------------
 (Object reference variable) instanceOf(class/interface type)
 
-
-
-
-
-
 Precedence and associativity
 ----------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -253,11 +142,6 @@ if(condition){
 else{
 //false part
 }
-
-
-
-
-
 
 
 Nested if
@@ -274,20 +158,8 @@ else{
 	//false part of cond1
 }
 
-
-
-
-
-
-
-
-
-
-
-
 switch case
 -----------
-
 
 switch(parameter){
 	case 1:
@@ -301,20 +173,6 @@ switch(parameter){
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 while loop
 -----------
 
@@ -323,14 +181,6 @@ while(count <11){
 	system.out.println(count);
 	count++;
 }
-
-
-
-
-
-
-
-
 
 
 do while loop
@@ -343,27 +193,12 @@ do {
 }while(count<11);
 
 
-
-
-
-
-
-
-
- 
- 
  for loop
  ---------
  
  for(int i=1; i<11; i++){
  	System.out.println("count is: "+ i);
  }
- 
- 
- 
- 
- 
- 
  
  break statement
  ----------------
@@ -381,14 +216,7 @@ do {
  b=c;
  
  }
- 
- 
- 
- 
- 
- 
- 
- 
+  
  continue statement
  -------------------
  
@@ -406,16 +234,7 @@ do {
  
  }
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  labeled statement
  -----------------
  boolean isTree =true;
@@ -429,27 +248,11 @@ do {
  	}//end of outer for loop
  System.out.println("good bye");
  
- 	
- 
- 
- 
- 
- 
- 
- 
- 
  Output statement
  ----------------
  System.out.println()
  System.out.print()
  System.out.printf()
-
-
-
-
-
-
-
 
 Escape sequence
 ------------------
@@ -458,26 +261,10 @@ Escape sequence
 \""
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 printf
 ------
 
-
 %[argument_index$][flags][width][.precision]conversion character 
-
-
 
 .s   formate string
 .d format decimal integer
@@ -485,18 +272,6 @@ printf
 .c => format character
 .t => format time/date value
 .n => line separator
-
-
-
-
-
-
-
-
-
-
-
-
 
 Read input from user
 --------------------
@@ -506,18 +281,7 @@ Scanner   //import java.util.Scanner;
  Scanner sc = new Scanner(System.in);
  
  int id = sc.nextInt();
- sc.nextLine(); //capture the newline {enter key}
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ sc.nextLine(); //capture the newline {enter key} 
  
  nextInt() => integer
  nextFloat() -> float
@@ -527,23 +291,6 @@ Scanner   //import java.util.Scanner;
  nextBoolean() => boolean
  next() => single word - string without space
  nextLine() => string with spaces
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  class & object
  --------------
@@ -558,32 +305,14 @@ Scanner   //import java.util.Scanner;
  
  Object
  ------
- Book objBoook = new Book();
- 
- 
- 
- 
- 
- 
- 
+ Book objBoook = new Book(); 
  
  Accesssor :- method used to return the value of a private field -> getter 
  
  Mutator:- method used to set a value of a private field -> setter
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  
  Access Specifier
  ----------------
- 
  public :- classes, methods and fields declared as pubic can be accessed from any class in an application
  
  private:- private methods and field can only be accessible within the same class to which the methods and fields belong
@@ -592,40 +321,12 @@ Scanner   //import java.util.Scanner;
  
  default (no specifier, hence no keyword default):- can be accessible only with the same package, but not frpm outside this package
  
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  constructor => default constructor & parameterized constructor
  
  
- 
- 
  this keyword
  -------------
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  constructor overloading
  ------------------------
@@ -636,20 +337,11 @@ Scanner   //import java.util.Scanner;
  2. type of parameter
  3. order of parameter
  
- 
  -> the compiler identifies which constructor is to be invoked based on the number of parameters in the list and their type
- 
- 
- 
- 
- 
+  
  Static in java
  --------------
- 
- 
- 
- 
- 
+
  Primitive 	wrapper class
  byte		Byte
  short 		Short
@@ -661,19 +353,14 @@ Scanner   //import java.util.Scanner;
  boolean	Boolean
  
  
- 
- 
- 
  Wrapping
  ---------------
  int a=10
  Integer it1= new Integer(a)
  //Unwraping
  int b = it1.intValue()
- 
- 
- 
- 
+
+
  Autoboxing
  ---------
  converting a primitive value into an object of the corresponding wrapper class
@@ -684,25 +371,7 @@ Scanner   //import java.util.Scanner;
  -------
  Integer i=10; //boxing
  int y = i; //unboxing
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+  
  
  Date
  ------
@@ -711,57 +380,18 @@ Scanner   //import java.util.Scanner;
  
  
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  Calendar 
  --------
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  
  
  Arrays 
  ------
- 
- Arrays holds homogeneous set of values
+  Arrays holds homogeneous set of values
  
  int a[] = new int[12];
- 
- 
- 
+
  array_name.length  //length property
- 
- 
- 
  
  2D array
  -------
@@ -769,18 +399,13 @@ Scanner   //import java.util.Scanner;
  
  char names[][] = new char[3][]   //jagged array
  
- 
- 
  Arrays.sort(int[] a)
  
  Arrays.sort(int[] a, int fromIndex, int toIndex)
  
  Arrays.fill(int[] a, int value)
- 
- 
+  
  Arrays.fill(int[] a, int fromIndex, int toIndex, int val)
- 
- 
  
  Arrays.binarySearch(int[] a, int key)
  
@@ -794,42 +419,20 @@ Scanner   //import java.util.Scanner;
  
  Arrays.sort()
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+
  String
  --------
  string are immutable
  
  String name = "mini";
- 
- 
+  
  String name2 = new String("deepak");
- 
- 
- 
- 
- 
+  
  char c[] = {'d', 'e', 'e', 'p', 'a', 'k'}
  String name = new String(c);
  
- 
- 
  String function
  ---------------
- 
  length
  charAt
  equals
@@ -851,30 +454,17 @@ Scanner   //import java.util.Scanner;
  isDigit
  isLetterOrDigit
  
- 
-  
- 
- 
- 
- 
  == : checks for the address of the string objects to be compared
  equals : checks for the values inside the objects to be compared
  
- 
- 
- 
- 
- 
+
  StringBuffer
  -----------
  StringBuffer is used to create a mutable string
  (thread safe)
  
  StringBuffer sb = new StringBuffer("java");
- 
- 
- 
- 
+  
  charAt
  sb.length()
  substring(int beginIndex, int endIndex)
@@ -882,39 +472,14 @@ Scanner   //import java.util.Scanner;
  toString:- string buffer to string
  
  
- 
- 
- 
- 
- 
- 
  StringBuilder
  -------------
  stringBuilder method is not thread safe. 
  StringBuilder is faster than StringBuffer
  
- 
- 
- 
- 
- 
- 
+
  Regular Expression
- ------------------
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+ ------------------ 
  
  
  =========================================================
@@ -924,73 +489,39 @@ Scanner   //import java.util.Scanner;
  }
  
  
- 
  to convert number to respective AsciValue in character
  System.out.println(arr[j]+" - "+(char)arr[j]);
  
- 
- 
+
  to split using .
  split("[.]");
- 
- 
- 
  
  integer to string datatype conversion
  int i=200;
  String s = Integer.toString(i);
  
- 
- 
- 
- 
  char arrName[] = numStr.toCharArray();
- 
- 
- 
- 
- 
  
  character to integer value
  char x='1';
  int X = character.getNumericValue(x);
- 
- 
+  
  x^y => Math.pow(x, y)      ; x,y both belong to double
- 
  
  to convert negative number to it's positive value
  int num=-1
  num = Math.abs(num)
  
- 
- 
- 
- 
  Integer to character
  int Key=1;
  char KeyChar = Integer.toString(key).charAt(0);
- 
- 
  
  string to integer
  num="200"
  Integer.parseInt(num);
  
- 
- 
- 
  character array to String
  char c[] = {"m", "i", "d"};
  String name = new String(c);
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  

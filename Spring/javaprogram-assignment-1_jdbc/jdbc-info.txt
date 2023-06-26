@@ -2,27 +2,16 @@ DriverManager:-
 It is used to load the driver into the memory. 
 It is used to stablish the connection between the java application and database
 
-
-
 Interface in JDBC:-
 1. Connection:- to stablish the connection
 2. Statement:- to create the statement (bind the SQL statement)
 3. ResultSet:- select/ any dml operations performed on the database
 4. PrepareStatement:- to get the runtime input fromthe user and insert the record into the database
 
-
-
-
 Exception:-
 ClassNotFoundException:- when it tries to load the driver information that is not available
 
-
 SQLExcption:- when there is an syntatical errors in the SQL statements
-
-
-
-
-
 
 the connection URL for the MySQL database is-
 jdbc:mysql://localhost:3306/sonoo
@@ -32,11 +21,6 @@ mysql - is the datebase
 localhost is the server name on which mysql is running, we may use ip address3306 is the port no.
 sonoo is database name
 
-
-
-
-
-
 Process:-
 file => new=> other=> maven=> maven project => next (don't check on create simple project skip archetype selector)
 => internal
@@ -45,11 +29,6 @@ file => new=> other=> maven=> maven project => next (don't check on create simpl
 groupId -> com.dkm
 artifactId -> JDBCversion -> 0.0.1-snapshot
 package-> com.dkm
-
-
-
-
-
 
 to edit the java version
 go to pom.xml
@@ -61,12 +40,10 @@ go to pom.xml
 
 click on project => maven => update project
 
-
 search mvnrepository
 search mysql=>
 chosse MySQL connector-> chosse 6.0.6
 copy maven code
-
 
 just below 
 <dependencies>
@@ -74,5 +51,3 @@ just below
 </dependencies>
 
 maven update!!
-
-

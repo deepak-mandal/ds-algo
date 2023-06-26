@@ -9,17 +9,11 @@ name: SampleDemo
 2. spring data jpa
 3. spring web
 
-
-
-
-
 WebService:- It is an application for communication between 2 devices or applications
-
 
 types of webservices:-
 1. SOAP: simple object access protocol
 2. REST: Representational State Transfer
-
 
 REST
 ----
@@ -30,23 +24,13 @@ protocol used is HTTP protocol
 
 multiple format of data is supported in RESTful webservice - plain-text, xml, JSON, HTML
 
-
-
-
-
-
-
 RequestHeader
 --------------
 Additional instructore sent with the request() this might define the type of resource required
 
-
-
 RequestBody
 -----------
 Data is sent with request
-
-
 
 ResponseBody
 ------------
@@ -57,8 +41,6 @@ it also response status
 404-> resource not found
 500-> server error
 
-
-
 Methods
 -------
 POST -> @POSTMapping
@@ -66,46 +48,25 @@ GET -> @GETMapping
 PUT -> @PUTMapping
 DELETE -> @DELETEMapping
 
-
 database used for testing the project initially . -> in-memory database (H2)
-
-
-
 
 model -> defines the data model required to perform crud operation
 repository-> is responsible to carry out crud operation in database
 service -> is the layer responsible to render the service
 controller-> this class is responsible to the end-user to specify the end-point exposed
 
-
-
-
-
-
-
-
-
 Overview
 --------
-
 right click on package
 1. com.cgi.model
 2. com.cgi.repository
 3. com.cgi.service
 4. com.cgi.controller
 
-
 in model => create class -> Department.java
 in repository => create interface -> DepartmentRepository with add CRUD repository
 in service => new interface DepartmentService & DepartmentServiceImpl.java(class) with dependency imported; source=> override & implement the methods
 in controller=> new class DepartmentCOntroller->@Autowired {service we are calling class from another class}-> only in constructor
-
-
-
-
-
-
-
 
 JUnit
 right click on class-> new junit testcase
@@ -117,16 +78,3 @@ private DepartmentReporesotory deptRepo
 
 run with junit testcase
 (we are calling the separtment service so @mock is used)
-
-
-
-
-
-
-
-
-
-
-
-
-
