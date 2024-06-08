@@ -1,1 +1,2 @@
 window + r => %temp%
+'' => services.msc
