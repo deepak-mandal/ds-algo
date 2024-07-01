@@ -6,3 +6,7 @@ Python3 code - Data Structures and Algorithms, OOP concepts - Data Encapsulation
 ![2](https://github.com/deepak-mandal/ds-algo/assets/55249860/cfedb256-af64-4e2d-a95d-a042279dd581)
 ![3](https://github.com/deepak-mandal/ds-algo/assets/55249860/908482f9-7417-4c6d-a09a-1e1309144baf)
 ![image](https://user-images.githubusercontent.com/55249860/194602477-32d3d51a-6064-4001-b78b-688eda1a44e6.png)
+
+
+# others
+TreeSize Free - software to get overview of all file size in single screen. it will be used to free unwanted data from PC.
